@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 var corsOptions = {
-  origin: "http://localhost:4000",
+  origin: "http://localhost:9001",
 };
 
 app.use(cors(corsOptions));
@@ -22,7 +22,7 @@ require("./app/routes/tutorial.routes.js")(app);
 
 // set port, listen for requests
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
